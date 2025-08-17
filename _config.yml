@@ -1,0 +1,7 @@
+title: Portfolio Site
+description: My product manager portfolio
+baseurl: ''
+url: ''
+collections:
+  projects:
+    output: true

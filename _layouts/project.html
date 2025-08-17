@@ -1,0 +1,138 @@
+---
+layout: default
+---
+
+<div class="project-container">
+  <!-- Left side -->
+  <div class="project-left">
+    <a href="{{ '/' | relative_url }}" class="back-button">← Back</a>
+
+    <h2>{{ page.company }}</h2>
+    <p style="margin-top: 0.8rem;"><strong>Role</strong></p>
+    <p>{{ page.role }}</p>
+    <p style="margin-top: 0.8rem;"><strong>Duration</strong></p>
+    <p>{{ page.duration }}</p>
+    <p style="margin-top: 0.8rem;"><strong>Location</strong> </p>
+    <p>{{ page.location }}</p>
+
+    <p style="margin-top: 0.8rem;"><a href="{{ page.clink }}" target="_blank" rel="noopener noreferrer">{{ page.clink }}</a></p>
+  </div>
+
+  <!-- Right side -->
+  <div class="project-right">
+    <h1>{{ page.title }}</h1>
+    <div class="project-description">
+      {{ content }}
+    </div>
+  </div>
+</div>
+
+<style>
+.project-container {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+
+}
+
+/* Sticky left sidebar */
+.project-left {
+  flex: 1;
+  max-width: 280px;
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  position: sticky;
+  top: 1rem;   /* distance from top */
+  align-self: flex-start; /* makes sticky work properly inside flexbox */
+  height:auto;
+}
+
+.project-left p{
+      color: var(--muted-text);
+}
+
+.project-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+/* Back button styling */
+.back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #333;
+}
+.back-button:hover {
+  text-decoration: underline;
+}
+
+.project-right p {
+  margin-top: 1rem;
+}
+
+h2, h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  padding-left: 1.5rem; /* push bullets inward */
+  margin-bottom: 1rem;  /* space after list */
+}
+
+li {
+  margin-bottom: 0.5rem; /* breathing space between items */
+}
+
+.project-right {
+  padding-bottom: 32rem; /* extra scrollable space */
+}
+
+ .collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    gap: 1rem;
+    margin-top: 30px;
+  }
+  .collage img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+    margin-right: 0;   /* avoid horizontal scroll */
+  }
+
+  .project-left {
+    position: relative; /* disable sticky */
+    max-width: 100%;    /* take full width */
+    width: 100%;
+    margin-bottom: 1.5rem; /* spacing before right side */
+  }
+
+  .project-right {
+    min-width: auto;
+    width: 100%;
+    padding-bottom: 2rem; /* reduce huge bottom space */
+    padding: 1rem; 
+  }
+  /* ✅ Make back button sticky */
+  .back-button {
+    position: sticky;
+    top: 0;
+    background: #f9f9f9;  /* match sidebar bg */
+    display: block;
+    padding: 0.5rem 0;
+    z-index: 10;          /* stay above content */
+  }
+}
+
+</style>

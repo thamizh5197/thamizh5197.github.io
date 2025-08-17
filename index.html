@@ -1,0 +1,73 @@
+---
+layout: default
+title: Portfolio
+---
+
+<div class="sidebar">
+  <h1>{{ site.data.bio.name }}</h1>
+  <p>
+    <a href="mailto:{{ site.data.bio.email }}" class="email">
+      {{ site.data.bio.email }}
+    </a>
+  </p>
+  <p>{{ site.data.bio.phone }}</p>
+  <p style="margin-top: 0.8rem;"><strong>Total Experience</strong></p>
+  <p>{{ site.data.bio.total_experience }}</p>
+  <p style="margin-top: 0.8rem;"><b>Roles</b></p>
+  <p>{{ site.data.bio.roles }}</p>
+
+  <p style="margin-top: 0.8rem;">
+    <a href="{{ site.data.bio.resume }}" target="_blank" rel="noopener noreferrer">Resume</a>
+  </p>
+
+  <ul>
+    {% for social in site.data.bio.socials %}
+      <li style="margin-top: 0.8rem;" ><a href="{{ social.url }}" target="_blank" rel="noopener noreferrer">{{ social.name }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="main">
+  <h2 style="margin-top: 0.4rem;">Work</h2>
+  {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+{% for project in sorted_projects %}
+
+    <div class="work-card" onclick="window.location.href='{{ project.url }}'">
+      <h3>{{ project.role }}</h3>
+
+      <!-- Company link (stops bubbling to card) -->
+      <a href="{{ project.clink }}" class="company" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+        {{ project.company }}
+      </a>
+
+      <p class="duration">{{ project.duration }} ({{ project.from }} – {{ project.to }}) · {{ project.location }}</p>
+      
+      <ul class="achievements">
+        {% for point in project.points %}
+          <li>{{ point }}</li>
+        {% endfor %}
+      </ul>
+      
+      <p class="skills">{{ project.skills }}</p>
+
+      <!-- Read more link (also stops bubbling to card) -->
+      <a href="{{ project.url }}" class="read-more" onclick="event.stopPropagation()">
+        Read more
+      </a>
+    </div>
+  {% endfor %}
+
+  <!-- Divider line -->
+  <hr class="section-divider">
+
+  <!-- Gallery section -->
+  <h2>Design snaps</h2>
+  <div class="collage">
+    {% assign images = site.static_files | where_exp: "file", "file.path contains '/screens/'" %}
+    {% for image in images %}
+      <div class="gallery-item">
+        <img src="{{ image.path }}" alt="Project image">
+      </div>
+    {% endfor %}
+  </div>
+</div>

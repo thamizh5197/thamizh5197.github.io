@@ -1,0 +1,231 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #f7f7f8;
+  --text-color: #222;
+  --muted-text: #666;
+  --accent-color: #0A58B5;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background: var(--bg-color);
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  max-width: var(--max-width);
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Left (bio) section */
+.sidebar {
+  flex: 0 0 280px;
+  padding: 2rem;
+  background: #fafafa;
+  border-right: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  height: 100vh;
+}
+
+.sidebar h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sidebar p {
+  margin-bottom: 0.5rem;
+  color: var(--muted-text);
+}
+
+.sidebar a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+.sidebar ul {
+  margin-top: 1rem;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* Main content */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.main h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+/* Work Experience Cards */
+.work-card {
+  cursor: pointer;
+  display: block;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.work-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.work-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.work-card .company,
+.work-card .read-more {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.work-card .duration {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-bottom: 0.8rem;
+}
+
+.work-card .achievements {
+  margin: 0 0 0.8rem 1.2rem;
+  padding: 0;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.work-card .achievements li {
+  margin-bottom: 0.4rem;
+}
+
+.work-card .skills {
+  font-size: 0.9rem;
+  color: var(--muted-text);
+  margin-top: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.work-card .company:hover,
+.work-card .read-more:hover {
+  text-decoration: underline;
+}
+
+/* Divider between sections */
+.section-divider {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 3rem 0;
+}
+
+/* Gallery (collage) */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 2rem; /* big breathing room */
+  grid-auto-flow: dense; /* allows filling in gaps like a collage */
+  margin-top: 2rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Randomized spanning effect */
+.gallery-item:nth-child(3n) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.gallery-item:nth-child(5n) {
+  grid-row: span 2;
+}
+.gallery-item:nth-child(7n) {
+  grid-column: span 2;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex: none;          /* remove rigid width */
+    width: 100%;         /* full width on mobile */
+    height: auto;        /* no fixed 100vh */
+    position: relative;  /* no sticky, just flows */
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .main {
+    width: 100%;         /* main takes full width */
+  }
+
+  /* Simplify gallery layout */
+  .collage {
+    grid-template-columns: 1fr; /* one column */
+    grid-auto-rows: auto;       /* let images size naturally */
+    grid-gap: 1rem;
+  }
+
+  /* Reset random spans so grid items don’t break layout */
+  .gallery-item:nth-child(3n),
+  .gallery-item:nth-child(5n),
+  .gallery-item:nth-child(7n) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+
