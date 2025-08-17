@@ -41,11 +41,11 @@ This experience shaped how I think about product leadership from discovery and d
 Snaps:
 
 <div class="collage">
-  <img src="screens/SL_user_interview.png" alt="work sample 1" >
-  <img src="screens/SL_user_interview2.png" alt="work sample 2" >
-  <img src="screens/sl1.jpg" alt="work sample 3" >
-  <img src="screens/sl2.jpg" alt="work sample 4" >
-  <img src="screens/sl3.jpg" alt="work sample 5" >
-  <img src="screens/sl4.jpg" alt="work sample 6" >
-  <img src="screens/sl5.jpg" alt="work sample 7" >
+  <img src="/screens/SL_user_interview.png" alt="work sample 1" >
+  <img src="/screens/SL_user_interview2.png" alt="work sample 2" >
+  <img src="/screens/sl1.jpg" alt="work sample 3" >
+  <img src="/screens/sl2.jpg" alt="work sample 4" >
+  <img src="/screens/sl3.jpg" alt="work sample 5" >
+  <img src="/screens/sl4.jpg" alt="work sample 6" >
+  <img src="/screens/sl5.jpg" alt="work sample 7" >
 </div>
