@@ -41,10 +41,10 @@ This phase of my career was less about recognition and more about building the c
 Snaps:
 
 <div class="collage">
-  <img src="/screens/grocery checkout.jpg" alt="grocery checkout" >
-  <img src="/screens/landing page 1.jpg" alt="landing page" >
-  <img src="/screens/landing page 2.jpg" alt="landing page" >
-  <img src="/screens/smart search.jpg" alt="smart search android app" >
-  <img src="/screens/amazon checkout.jpg" alt="amazon checkout" >
-  <img src="/screens/landing page 3.jpg" alt="landing page" >
+  <img src="screens/grocery checkout.jpg" alt="grocery checkout" >
+  <img src="screens/landing page 1.jpg" alt="landing page" >
+  <img src="screens/landing page 2.jpg" alt="landing page" >
+  <img src="screens/smart search.jpg" alt="smart search android app" >
+  <img src="screens/amazon checkout.jpg" alt="amazon checkout" >
+  <img src="screens/landing page 3.jpg" alt="landing page" >
 </div>
