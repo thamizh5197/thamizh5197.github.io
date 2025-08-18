@@ -1,0 +1,38 @@
+- role: Product Manager
+  company: Shorter Loop
+  location: Remote
+  from: Jan 2024
+  to: Jun 2025
+  duration: 1 yrs 6 mos
+  points:
+    - Increased traction, Demo to trial and trial to subscription conversions.
+    - Secured first paying customer.
+  skills: Product roadmaps, Product strategy, Cross-team Collaboration, User interviews, Leadership.
+  clink: https://www.shorterloop.com/
+  plink: 
+
+- role: User Experience Designer
+  company: Shorter Loop
+  location: Remote
+  from: Dec 2022
+  to: Dec 2023
+  duration: 1 yrs 2mos
+  points:
+    - Proposed product roadmap backed with surveys, market and user research.
+    - Validated ideas with user interviews and prototype testing.
+  skills: Figma, UX Research, Prototyping, Remote user testing.
+  clink: https://www.shorterloop.com/
+  plink: 
+
+- role: User Experience Designer
+  company: Phantom Digital Effects
+  location: Remote
+  from: Feb 2021
+  to: Oct 2022
+  duration: 1 yrs 9 mos
+  points:
+    - Increased SUS(System usability score) from 5 to 95.
+  skills: Figma, UX Research, User interviews, Cross-team Collaboration, Prototyping.
+  clink: https://phantomfx.com/
+  plink: 
+
