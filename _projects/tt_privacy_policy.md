@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: plain
 title: Task Tortoise Privacy Policy
 permalink: /portfolio/project/tt_privacy_policy/
 ---
 # Task Tortoise – Privacy Policy
-
 _Last updated: October 2025_
 
 ## Introduction
@@ -12,11 +11,11 @@ Welcome to **Task Tortoise!** We value your privacy and are committed to protect
 
 ## Data We Collect
 We collect only the information necessary to provide and improve your experience:
-- Basic account details when you sign in (name, email, profile photo)
-- Goal and personalization data you create inside the app
-- Usage analytics and crash data through Firebase Analytics
-- Subscription and payment details handled securely by Adapty
-- Local data stored on your device using Hive, and synced to the cloud via Firestore
+- Basic account details when you sign in (name, email, profile photo) via Google Sign-In or email login.
+- Goal and personalization data you create inside the app.
+- Usage analytics and crash data through Firebase Analytics.
+- Subscription and payment details handled securely by Adapty.
+- Local data stored on your device using Hive, and synced to the cloud via Firestore.
 
 ## How We Use Your Information
 Your information helps us provide core app functionality, generate personalized plans, process payments, and understand app performance.  
