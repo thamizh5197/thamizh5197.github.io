@@ -5,9 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .policy-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    h1, h2 {
+      color: #1a1a1a;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+    }
+
+    a {
+      color: #2b6cb0;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      margin-left: 1.25rem;
+    }
+
+    p, li {
+      margin-bottom: 0.75rem;
+    }
+  </style>
 </head>
 <body>
-  <div class="container" style="max-width: 800px; margin: 2rem auto; padding: 1rem;">
+  <div class="policy-container">
     {{ content }}
   </div>
 </body>

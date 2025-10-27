@@ -1,7 +1,8 @@
 ---
 layout: plain
 title: Task Tortoise Privacy Policy
-permalink: /portfolio/project/tt_privacy_policy/
+permalink: /project/tt_privacy_policy/
+hidden: true
 ---
 # Task Tortoise – Privacy Policy
 _Last updated: October 2025_
