@@ -47,6 +47,21 @@ We retain your data only while your account remains active. When deleted, your d
 ## Children’s Privacy
 Task Tortoise is not intended for users under 13. We do not knowingly collect data from children.
 
+## How to Delete Your Account
+
+You can delete your Task Tortoise account at any time. 
+To do so:
+
+Open the Task Tortoise app.
+
+Go to Profile → Delete Account.
+
+Confirm your choice. Your account and all associated data will be permanently removed from our systems immediately.
+
+Deleting your account removes all synced data from our servers, including your goals/plans, progress history, and personalized plans. Local data stored on your device will also be cleared automatically when you uninstall the app.
+
+If you experience issues or no longer have access to your account, you can request manual deletion by emailing us at missingparantheses@gmail.com
+
 ## Contact Us
 For privacy questions or data requests, contact us at:  
 📧 **missingparantheses@gmail.com**
