@@ -1,0 +1,87 @@
+.gitignore
+all_items.txt
+Gemfile
+Gemfile.lock
+index.html
+resume.pdf
+_config.yml
+_config.yml~
+
+[Folder] assets
+[Folder] assets\css
+assets\css\style.css
+[Folder] assets\images
+assets\images\profile.jpeg
+[Folder] screens
+screens\grocery checkout.jpg
+screens\landing page 1.jpg
+screens\landing page 2.jpg
+screens\landing page 3.jpg
+screens\pfx artist db.jpg
+screens\pfx gantt chart.jpg
+screens\pfx landing page.jpg
+screens\pfx modal.jpg
+screens\pfx review page.jpg
+screens\pfx summary.jpg
+screens\pfx-project-view.jpg
+screens\SL persona.jpg
+screens\SL user research.png
+screens\sl1.jpg
+screens\sl2.jpg
+screens\sl3.jpg
+screens\sl4.jpg
+screens\sl5.jpg
+screens\sl6.jpg
+screens\SL_user_interview.png
+screens\SL_user_interview2.png
+screens\smart search.jpg
+[Folder] _data
+_data\bio.yml
+_data\work.yml
+[Folder] _layouts
+_layouts\default.html
+_layouts\plain.html
+_layouts\project.html
+[Folder] _projects
+_projects\Initial-career.md
+_projects\phantomfx-ux.md
+_projects\shorter-loop.md
+_projects\tt_privacy_policy.md
+[Folder] _site
+_site\index.html
+_site\resume.pdf
+[Folder] _site\assets
+[Folder] _site\assets\css
+_site\assets\css\style.css
+[Folder] _site\assets\images
+_site\assets\images\profile.jpeg
+[Folder] _site\project
+[Folder] _site\project\tt_privacy_policy
+_site\project\tt_privacy_policy\index.html
+[Folder] _site\projects
+_site\projects\Initial-career.html
+_site\projects\phantomfx-ux.html
+_site\projects\shorter-loop.html
+[Folder] _site\screens
+_site\screens\grocery checkout.jpg
+_site\screens\landing page 1.jpg
+_site\screens\landing page 2.jpg
+_site\screens\landing page 3.jpg
+_site\screens\pfx artist db.jpg
+_site\screens\pfx gantt chart.jpg
+_site\screens\pfx landing page.jpg
+_site\screens\pfx modal.jpg
+_site\screens\pfx review page.jpg
+_site\screens\pfx summary.jpg
+_site\screens\pfx-project-view.jpg
+_site\screens\SL persona.jpg
+_site\screens\SL user research.png
+_site\screens\sl1.jpg
+_site\screens\sl2.jpg
+_site\screens\sl3.jpg
+_site\screens\sl4.jpg
+_site\screens\sl5.jpg
+_site\screens\sl6.jpg
+_site\screens\SL_user_interview.png
+_site\screens\SL_user_interview2.png
+_site\screens\smart search.jpg

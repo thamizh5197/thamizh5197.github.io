@@ -9,10 +9,11 @@ to: Oct 2022
 duration: 1 yrs 9 mos
 date: 2021-06-01 
 points:
-  - Improved System Usability Score (SUS) from 5 to 95.
-  - Designed an internal tool adopted by 400+ employees across eight departments.
+  - Improved System Usability Score from 5 to 95
+  - Design systems, User interviews and Prototype testing
 skills: Figma, UX Research, User interviews, Cross-team Collaboration, Prototyping
 clink: https://phantomfx.com/
+slug: phantom-fx
 ---
 
 In early 2021, Phantom FX approached me for freelance work on their internal project management tool. After exploring the product and its impact on workflows, I saw an opportunity to make a deeper impact and joined full-time as a UI/UX Designer.

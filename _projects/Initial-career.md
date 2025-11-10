@@ -9,8 +9,8 @@ to: Dec 2020
 duration: 1 yrs 7 mos
 date: 2019-10-01
 points:
-  - Revamped websites and designed both web and mobile applications.
-  - Created design systems and conducted user interviews and usability testing sessions.
+  - Revamped websites & Built mobile applications
+  - Design systems, User interviews and Prototype testing
 skills: Figma, UX Research, Prototyping, Remote user testing
 ---
 
@@ -40,10 +40,22 @@ This phase of my career was less about recognition and more about building the c
 
 Snaps:
 
-<div class="collage">
-  <img src="/screens/grocery checkout.jpg" alt="grocery checkout" >
-  <img src="/screens/landing page 1.jpg" alt="landing page" >
-  <img src="/screens/landing page 2.jpg" alt="landing page" >
-  <img src="/screens/smart search.jpg" alt="smart search android app" >
-  <img src="/screens/landing page 3.jpg" alt="landing page" >
+<div class="img-grid">
+ 
+  <div class="gallery-item">
+    <img src="/screens/grocery checkout.jpg" alt="grocery checkout" >
+  </div>
+  
+  <div class="gallery-item">
+    <img src="/screens/landing page 1.jpg" alt="landing page" >
+  </div>
+  <div class="gallery-item">
+    <img src="/screens/landing page 2.jpg" alt="landing page" >
+  </div>
+  <div class="gallery-item">
+   <img src="/screens/smart search.jpg" alt="smart search android app" >
+  </div>
+  <div class="gallery-item">
+   <img src="/screens/landing page 3.jpg" alt="landing page" >
+  </div>
 </div>
