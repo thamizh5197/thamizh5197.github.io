@@ -101,6 +101,7 @@ title: Portfolio
 
   <!-- Gallery section -->
   <h2>Design snaps</h2>
+  <p>A peek at my work. Case studies have the full story.</p>
   <div class="collage">
     {% assign images = site.static_files | where_exp: "file", "file.path contains '/screens/'" %}
     {% for image in images %}
