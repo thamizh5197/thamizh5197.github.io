@@ -6,7 +6,7 @@ role: Product Manager (previously UX Designer)
 location: Remote
 from: Dec 2022
 to: Jun 2025
-duration: 2 yrs 6 mos
+duration: 2 yrs 7 mos
 date: 2025-06-01
 slug: shorter-loop
 points:

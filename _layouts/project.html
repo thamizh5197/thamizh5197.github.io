@@ -26,9 +26,11 @@ layout: default
       </div>
       
       <div class="meta-item">
-        <a href="{{ page.clink }}" target="_blank" rel="noopener noreferrer" class="company-link">
-          Visit Website →
-        </a>
+        {% if page.clink %}
+  <a href="{{ page.clink }}" target="_blank" rel="noopener noreferrer" class="company-link">
+    Visit Website →
+  </a>
+{% endif %}
       </div>
     </div>
   </aside>

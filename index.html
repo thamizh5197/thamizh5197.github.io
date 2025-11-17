@@ -32,9 +32,16 @@ title: Portfolio
     {% unless project.hidden %}
       <div class="work-card">
         <h3>{{ project.role }}</h3>
-        <a href="{{ project.clink }}" class="company" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
-          {{ project.company }}
-        </a>
+        {% if project.clink %}
+  <a href="{{ project.clink }}" class="company" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+    {{ project.company }}
+  </a>
+{% else %}
+  <span class="duration">
+    {{ project.company }}
+  </span>
+{% endif %}
+
         <p class="duration">{{ project.duration }} ({{ project.from }} – {{ project.to }}) · {{ project.location }}</p>
         
         <!-- Info Chips Section - All in one row -->
@@ -74,8 +81,16 @@ title: Portfolio
         
         <!-- Overview Link -->
         <div class="card-links">
-          <a href="{{ project.url }}" class="overview-link" onclick="event.stopPropagation()">Overview →</a>
-        </div>
+  {% if project.url %}
+  <div class="card-links">
+    <a href="{{ project.url }}" class="company" onclick="event.stopPropagation()">
+      Overview
+    </a>
+  </div>
+{% endif %}
+
+</div>
+
         
         <!-- Case Studies Section -->
 {% assign case_studies = site.projects | where: "project", project.slug | where: "layout", "case-study" | sort: "order" %}
@@ -85,7 +100,7 @@ title: Portfolio
     <ul class="case-studies-list">
       {% for case_study in case_studies %}
         <li>
-          <a href="{{ case_study.url }}" onclick="event.stopPropagation()">{{ case_study.title }}</a>
+          <a href="{{ case_study.url }}" class="company" onclick="event.stopPropagation()">{{ case_study.title }}</a>
         </li>
       {% endfor %}
     </ul>
