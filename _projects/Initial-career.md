@@ -1,11 +1,11 @@
 ---
 layout: project
 title: User Experience Designer
-company: Early career
+company: Early career - freelance and personal projects
 role: User Experience Designer
 location: Remote
 from: Jun 2019
-to: Dec 2020
+to: Jan 2021
 duration: 1 yrs 7 mos
 date: 2019-10-01
 points:
@@ -18,7 +18,7 @@ After completing my Master’s in Software Engineering, I realized that while I 
 
 Before joining larger companies, I built my foundation as a designer through personal projects, freelance work, and collaborations with smaller businesses. These experiences gave me hands-on exposure to the full design process and helped me develop the core skills I carry into my work today.
 
-## My Role & Approach
+## My Role
 
 * Revamped websites to improve usability, structure, and aesthetics
 * Designed both **web and mobile applications**, including everyday products like grocery apps
