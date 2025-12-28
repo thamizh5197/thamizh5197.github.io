@@ -120,6 +120,95 @@ title: Portfolio
   <!-- Divider line -->
   <hr class="section-divider">
 
+  <!-- Salary Growth Section -->
+  <!-- <h2 style="margin-top: 2rem;">Salary Growth</h2>
+  <p>I have a consistent record of strong impact in my roles, reflected through strong year-over-year salary growth.</p>
+
+  <canvas id="salaryChart" style="max-width: 760px; margin-top: 1.5rem;"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('salaryChart').getContext('2d');
+
+    const salaryValues = [
+      1,      // Pre-2021 Freelance
+      4,      // 2021 base
+      7,      // 2022
+      11,     // 2023
+      15,     // 2024
+      17.4    // 2025
+    ];
+
+    const yearLabels = [
+      "Pre-2021 (Freelance)",
+      "2021",
+      "2022",
+      "2023",
+      "2024",
+      "2025"
+    ];
+
+    const growthPercentages = [
+      null,  // Pre-2021
+      null,  // 2021
+      75,    // 2022
+      57,    // 2023
+      36,    // 2024
+      16     // 2025
+    ];
+
+    const growthTypes = [
+      "",
+      "",
+      "Raise",
+      "Job Switch",
+      "Raise+Promotion",
+      "Raise"
+    ];
+
+    new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: yearLabels,
+        datasets: [{
+          label: "Salary Growth",
+          data: salaryValues,
+          backgroundColor: "rgba(60, 120, 220, 0.75)",
+          hoverBackgroundColor: "rgba(60, 120, 220, 0.9)",
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const idx = context.dataIndex;
+                const pct = growthPercentages[idx];
+                const typ = growthTypes[idx];
+
+                if (pct === null) return ""; // hide tooltip for Pre-2021 + 2021
+
+                return pct + "% (" + typ + ")";
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            display: false,        // <-- hides entire left axis
+            grid: { display: false }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  </script> -->
+
   <!-- Gallery section -->
   <h2>Design snaps</h2>
   <p>A peek at my work. Case studies have the full story.</p>

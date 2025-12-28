@@ -42,7 +42,6 @@ Snaps:
 <div class="collage">
   <img src="/screens/pfx summary.jpg" alt="work sample 1" >
   <img src="/screens/pfx gantt chart.jpg" alt="work sample 2" >
-  <img src="/screens/pfx review page.jpg" alt="work sample 3" >
   <img src="/screens/pfx modal.jpg" alt="work sample 4" >
   <img src="/screens/pfx landing page.jpg" alt="work sample 5" >
   <img src="/screens/pfx-project-view.jpg" alt="work sample 6" >
