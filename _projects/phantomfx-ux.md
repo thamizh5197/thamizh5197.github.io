@@ -46,7 +46,6 @@ Snaps:
   <img src="/screens/pfx modal.jpg" alt="work sample 4" >
   <img src="/screens/pfx landing page.jpg" alt="work sample 5" >
   <img src="/screens/pfx-project-view.jpg" alt="work sample 6" >
-  <img src="/screens/pfx artist db.jpg" alt="work sample 7" >
 </div>
 
 
