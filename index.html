@@ -27,13 +27,21 @@ title: Portfolio
 <div class="main">
 
   <h2 style="margin-top: 0.4rem;">Work</h2>
-  <p style="margin-bottom: 0.4rem;">Product designer with 6+ years of experience turning messy, ambiguous problems into
-    structured, usable systems.
-    I’ve worked in early-stage startups and complex operational environments where design decisions had to balance user
-    needs, technical constraints, and business viability.
 
-    My work sits at the intersection of product strategy, systems thinking, and hands-on execution; from shaping 0→1
-    roadmaps to redesigning internal tools used by hundreds of people daily.</p>
+  <div class="intro-bio">
+    <p>
+      Product designer with 6+ years of experience turning messy, ambiguous problems into
+      structured, usable systems. I’ve worked in early-stage startups and complex operational
+      environments where design decisions had to balance user needs, technical constraints,
+      and business viability.
+    </p>
+
+    <p>
+      My work sits at the intersection of product strategy, systems thinking, and hands-on
+      execution — from shaping 0→1 roadmaps to redesigning internal tools used by hundreds
+      of people daily.
+    </p>
+  </div>
 
 
   {% assign sorted_projects = site.projects | sort: "date" | reverse %}
@@ -258,6 +266,10 @@ title: Portfolio
     transition: transform 0.2s ease;
   }
 
+  /* Space below intro bio */
+  .intro-bio {
+    margin-bottom: 2.8rem;
+  }
 
   .chip-icon {
     font-size: 1rem;
