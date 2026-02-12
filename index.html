@@ -4,7 +4,6 @@ title: Portfolio
 ---
 <div class="sidebar">
   <h1>{{ site.data.bio.name }}</h1>
-  <p>{{ site.data.bio.about }}</p>
   <p>
     <a href="mailto:{{ site.data.bio.email }}" class="email">
       {{ site.data.bio.email }}
@@ -26,7 +25,15 @@ title: Portfolio
 </div>
 
 <div class="main">
+
   <h2 style="margin-top: 0.4rem;">Work</h2>
+  <p>Product designer with 6+ years of experience turning messy, ambiguous problems into structured, usable systems.
+    I’ve worked in early-stage startups and complex operational environments where design decisions had to balance user
+    needs, technical constraints, and business viability.
+
+    My work sits at the intersection of product strategy, systems thinking, and hands-on execution — from shaping 0→1
+    roadmaps to redesigning internal tools used by hundreds of people daily.</p>
+
   {% assign sorted_projects = site.projects | sort: "date" | reverse %}
   {% for project in sorted_projects %}
   {% unless project.hidden %}

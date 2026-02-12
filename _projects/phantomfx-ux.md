@@ -16,26 +16,29 @@ clink: https://phantomfx.com/
 slug: phantom-fx
 ---
 
-In early 2021, Phantom FX approached me for freelance work on their internal project management tool. After exploring the product and its impact on workflows, I saw an opportunity to make a deeper impact and joined full-time as a UI/UX Designer.
+Phantom FX first approached me for freelance work on their internal production management system. After reviewing the tool and its impact on day-to-day studio operations, I proposed a full system rethink rather than a surface-level UI redesign. I later joined full-time to lead the transformation.
 
-The tool was critical for managing 400+ VFX artists and 15+ managers across projects with 10,000+ tasks each. But it was slow (10+ minute load times), confusing (inconsistent UI, poor information architecture), and nearly unusable (SUS score <10).
+The system was responsible for coordinating **200+ VFX artists and 15+ managers** across projects containing **10,000+ tasks each**. It was slow, confusing, and largely avoided by teams, with a System Usability Scale score below 10.
 
-## My Role & Approach
+### My Role & Approach
 
-* Led user research across departments to uncover pain points in workflows and tool usage
-* Reframed the problem from a UI facelift to a full UX and system redesign
-* Simplified information architecture with role-based dashboards, subtasks, and modal-based task views
-* Streamlined data handling to reduce load times dramatically
-* Added visual metrics, Gantt charts, and dashboards to make progress, budget, and schedules easier to understand
-* Established a design system with dark mode (the studio’s working environment), consistent icons, and clear feedback states
+* Conducted cross-department research to understand how production actually worked, not just how the software expected it to work
+* Discovered that the biggest issues were structural: rigid task logic, poor visibility into workloads, and heavy reliance on Excel outside the system
+* Reframed the challenge from a UI cleanup to a workflow and information architecture redesign
+* Simplified the system by introducing role-based dashboards, flexible subtasks, and on-demand data loading instead of heavy table views
+* Replaced manual resource tracking spreadsheets with a **Gantt-style scheduling view** that made artist availability and workload visible
+* Standardized terminology and removed unnecessary data fields to reduce cross-team confusion
+* Established a design system suited to the studio’s working environment, improving consistency and usability
 
-## The Impact
+### The Impact
 
-* Turned a failing tool into a reliable daily driver for 400+ artists and 15+ managers
-* Improved usability across departments, aligning tech with real workflows
-* Boosted the System Usability Scale score from below 10 to **90**
+* Increased adoption from under 10% to widespread daily use across departments
+* Improved System Usability Scale score from below 10 to **90+**
+* Reduced reliance on parallel Excel workflows by bringing real operational visibility into the product
+* Turned a frustrating internal tool into a trusted system that supported production planning and decision-making
 
-This project showed me how much a well-designed system can transform not just usability, but also collaboration and morale in a high-pressure creative environment.
+This project taught me how deeply design can influence operational efficiency — not just by improving interfaces, but by aligning systems with how people actually work.
+
 
 Snaps:
 
