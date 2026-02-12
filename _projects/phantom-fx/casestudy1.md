@@ -1,132 +1,210 @@
 ---
 layout: case-study
-title: Redefined an internal tool used by 400+ employees across eight departments.
+title: Redefining an Internal Production System Used by 400+ Employees
 project: phantom-fx
 order: 1        
 hidden: true
 ---
 
-Phantom FX reached out to me for freelance work in Jan 2021. After reviewing their existing application and its impact on the company's workflow, I was intrigued to be involved in a redesign. I pitched for a full-time role and was hired as a UI/UX Designer.
+Phantom FX initially approached me for freelance work in January 2021. After reviewing their internal production management tool and understanding its operational impact, I proposed a full system rethink rather than a surface-level UI redesign. I later joined full-time as the UI/UX Designer to lead the transformation.
+
+This project evolved from “fix the interface” to rebuilding how 200+ artists and 15+ managers coordinate 10,000+ tasks per project.
+
+---
 
 ## Highlights
 
-- Initiated user research across departments to uncover workflow mismatches and usability pain points
-- Discovered critical UX flaws: rigid task logic, slow data loads (10+ mins), and **<10 SUS score**
-- Reframed the problem from a UI fix to a full UX and system rethink
-- Mapped real-world task flows and redesigned the IA to reflect actual studio operations
-- Streamlined data handling to significantly reduce load times and improve responsiveness
-- Drove cross-functional alignment between artists, coordinators, and tech to build a usable, scalable tool
-- Turned a failing internal product into a reliable daily driver for **200+ VFX artists and 15+ managers**
+- Took ownership of a failing internal system with **<10% adoption and <10 SUS score**
+- Conducted cross-functional research across 8 departments to uncover workflow mismatches
+- Reframed the challenge from a UI cleanup to a structural workflow redesign
+- Rebuilt information architecture around real studio operations instead of assumed task logic
+- Introduced Gantt-based scheduling to replace manual Excel resource tracking
+- Reduced heavy data-fetch bottlenecks by redesigning how task data was loaded
+- Increased adoption to **97% across departments** within 6 months
+- Improved System Usability Scale score to **90+**
+
+---
 
 ## The Problem
 
-### Project Management Application Brief
+### The Scale of Operations
 
-Being a visual effects studio, the company gets movie shots from clients and works on them to add 2D, 3D and other visual effects. On an average project there would be 3 to 4 sequences, where each sequence could have around 200 shots. Furthermore, each shot has 4-5 tasks to be done upon them like 2D, 3D, rigging, modelling etc. So an average project would contain around **10,000 individual tasks** to be worked on. The company has around **200 VFX artists and ~15 managers** to oversee the completion, budget and quality of these tasks.
+Phantom FX handles film projects consisting of:
 
-### Major Use Cases of the Application
+- 3–4 sequences per project  
+- ~200 shots per sequence  
+- 4–5 tasks per shot (2D, 3D, rigging, modelling, etc.)  
 
-1. Project progress tracking
-2. Project budget tracking
-3. Project quality control
-4. Artists management
+That results in roughly **10,000 individual tasks per project**.
 
-### The Challenge
+These tasks were coordinated across:
+- ~200 VFX artists  
+- 15+ managers and production stakeholders  
 
-The existing application was developed in an agile methodology **without any designer** in the team. The tool was inconsistent with UI, information architecture was a mess and it took **more than 10 mins to load** specific pages due to numerous data being fetched from the server. A shot has 24 unique specifications as do tasks, so imagine fetching information of 1000 tasks with their corresponding 24 data points—that's **24,000 specifications** loaded for a single person accessing an average project.
+The internal tool was meant to centralize this complexity.
 
-A SUS survey was conducted with 20+ people and the score turned out to be **below 10**.
+Instead, it became a bottleneck.
 
-While it looked like just a UI redesign was required to solve the problems, after conducting user interviews with the stakeholders from each department, it was clear that there was a **lack of understanding of the tool** as it was different from their workflow. For example, the tool assumes one task created on a shot is going to be assigned and completed by one artist, but in reality artists often get higher priority tasks where they have to put their current task on hold. After this, the coordinator creates a new task in the application in order to assign it to a different artist.
+---
 
-### Pain Points from User Interviews
+## What Was Actually Broken
 
-- **Users couldn't find basic information** like artist's current work in progress task, task status, task ETA, review notes etc.
-  - The information did exist but the user wasn't able to find it
-  
-- **Users weren't aware of the existence of certain features** like exporting, editing information, filtering table data etc.
-  - The user didn't know that an element could be interacted with, due to bad UI elements without feedbacks
-  
-- **Users are not familiar with jargons** used in the application
-  - Each department added their own jargon which ended up hurting users from other departments who are not aware of them
-  
-- **Users want to visualize the progress** of the project instead of just numbers
-  - Existing application displayed everything with tables and numbers
-  
-- **The application was not flexible enough** for the team to juggle between high and low priority projects
+The system was built without a designer. On the surface, it looked like a UI problem.
 
-## The Process
+Underneath, it was a systems problem.
 
-### User Task Analysis
+### Technical Friction
 
-For a major redesign I had to start from understanding the workflow of the departments, how a project is stored and how different user roles such as Artists, Supervisors, Line producers etc interact with the application for different purposes.
+- Pages took **10+ minutes to load** due to fetching massive datasets (up to 24,000 specifications at once)
+- Task logic assumed one task = one artist = one continuous execution
+- Data-heavy tables forced users to parse everything at once
 
-#### Roles and Tasks
+### Operational Misalignment
 
-**1. Line Producers**
-- Create projects with budgets and tasks
-- Track project based on sequence budget and forecasts
-- Check for availability of the artist in upcoming days or weeks for onboarding new projects
-- Assign coordinators, supervisors and sequence supervisors to the projects
+Through interviews, I discovered something more critical:
 
-**2. Coordinators**
-- Schedule tasks to artists
-- Follow up on schedule and artist attendance
-- Reschedule tasks in unusual scenarios
-- Track the progress of tasks
+The software assumed linear task completion.  
+Reality was dynamic.
 
-**3. Supervisors**
-- Review tasks that are done by artists
-- Define budget for tasks for new projects
-- Approve and push shots to rendering farm
+Artists frequently paused tasks for higher-priority shots. Coordinators would duplicate tasks in the system to reassign work. Excel sheets were being used outside the tool to track real workload.
 
-**4. Team Leads**
-- Review tasks done by artists
-- Work on assigned tasks
-- Check the artist's work in progress tasks
+The product wasn’t failing because of UI inconsistency.  
+It was failing because it didn’t reflect how production actually worked.
 
-**5. Artists**
-- Work on assigned tasks
-- Update progress of the tasks
-- Publish dailies
-- Publish completed tasks for review
+---
 
-**6. Finance Accountant**
-- Track project budget
-- Generate project financial metrics
+## Research & System Understanding
 
-### Fixing the Information Architecture
+I conducted interviews across 8 roles:
 
-The project structure and data points (specifications) are crucial for enabling the user to easily find information that they are looking for. But the existing application handled it badly which resulted in users having a hard time accessing information.
+- Line Producers  
+- Coordinators  
+- Supervisors  
+- Team Leads  
+- Artists  
+- Finance  
 
-**Following steps were taken to fix the information architecture:**
+Rather than asking “what UI is confusing?”, I mapped:
 
-1. Newly requested data points were added and unnecessary ones were removed
-2. Subtasks were added to project structure to let the coordinators divide or create several subtasks under the main task, which also makes it easy to track budget unlike before
-3. Role-based personalized dashboard was added instead of having a separate page for each role in the application
-4. New layout was designed for viewing project information. Where instead of tables, users can view the shot or task info through a modal. Because of the modals the application no longer has to bring 24,000 data points at once, instead loads information of the particular task/shot that is demanded by the user. At the same time, users can still choose to customize the table columns
+- How tasks actually moved between people  
+- Where bottlenecks occurred  
+- How priorities shifted  
+- How budgeting decisions were made  
 
-### Adding Project Metrics
+This exposed a core insight:
 
-1. Defined the project metrics on budget, progress and productivity which are visualized through charts and graphs. The users can export the metrics as Excel if needed
-2. Separate page for scheduling tasks with a Gantt chart to show artist schedules was added. Which also shows resources (artist) available in upcoming weeks to help Line producers onboard new projects
+The studio didn’t need better task tables.  
+They needed **operational visibility**.
 
-### Other Improvements
+---
 
-- As the entire team works with ceiling lights off, **dark mode was the primary choice**. A design system was created to ensure UI consistency
-- Furthermore, complicated jargons and acronyms were renamed to be easily understood. Icons were reworked to be consistent across the pages
-- Warning, error, success and help texts were added to increase usability
-- An exclusive page for the finance team to see forecasts on resource spending and to get insights from completed projects was added
+## Reframing the System
+
+Instead of redesigning screens, I redesigned the logic.
+
+### 1. Fixing the Information Architecture
+
+The previous structure forced users to navigate multiple rigid pages per role.
+
+I introduced:
+
+- A revised project structure with subtasks for flexible reassignment
+- Role-based dashboards tailored to decision needs
+- Contextual modals to load task details on demand instead of fetching all 24,000+ data points at once
+
+This significantly reduced load times and improved perceived performance without requiring backend overhauls.
+
+The goal wasn’t visual polish.  
+It was cognitive and technical efficiency.
+
+---
+
+### 2. Replacing Excel With Visibility
+
+One of the biggest operational pain points was resource tracking.
+
+Coordinators manually tracked artist availability in Excel because the system couldn’t visualize capacity or future allocation.
+
+Instead of building complex automation, I introduced a **Gantt-based scheduling view**:
+
+- Visual timeline of artist workload  
+- Clear visibility into unassigned or overbooked artists  
+- Support for shifting priorities without duplicating tasks  
+
+This replaced parallel spreadsheet workflows and gave production leadership real-time clarity.
+
+---
+
+### 3. Removing Jargon & Cognitive Noise
+
+Each department had introduced its own terminology into the tool over time. This created confusion across roles.
+
+I:
+
+- Standardized naming conventions  
+- Removed unnecessary data fields  
+- Simplified labels and acronyms  
+- Added contextual feedback (error, success, warning states)
+
+This reduced onboarding friction and cross-team misunderstandings.
+
+---
+
+### 4. Introducing Metrics That Matter
+
+The original system showed numbers.  
+It didn’t show insight.
+
+I defined and visualized:
+
+- Budget burn  
+- Progress velocity  
+- Productivity metrics  
+- Forecasts for resource allocation  
+
+Finance teams received a dedicated view for financial tracking, while production teams gained visibility into operational health.
+
+The system shifted from passive tracking to active decision support.
+
+---
+
+## Designing Under Real Constraints
+
+This wasn’t a greenfield SaaS rebuild.
+
+Constraints included:
+- Legacy backend architecture  
+- Engineering bandwidth limitations  
+- A live production environment that couldn’t tolerate downtime  
+
+Every solution had to balance:
+
+- Development feasibility  
+- Operational stability  
+- User clarity  
+
+Instead of introducing technically complex automation, I prioritized structural improvements that delivered immediate clarity and reliability.
+
+---
 
 ## The Impact
 
-After user testing sessions and presentations with the production team, the application was developed and deployed.
+After implementation and rollout:
 
-A System Usability Scale survey was conducted after a few weeks and the score was **90**.
+- Adoption increased from <10% to **97% across 8 departments**
+- SUS improved from below 10 to **90+**
+- Excel-based parallel workflows were eliminated
+- Load performance significantly improved due to smarter data loading patterns
 
-It was an amazing opportunity to create a good impact on day-to-day life of about 200 people.
+More importantly, the system became part of daily studio operations.
 
-## Before and after interfaces
+It wasn’t just usable.  
+It became trusted.
+
+---
+
+## Before and After Interfaces
+
 <div class="img-grid">
   <div class="gallery-item">
     <img src="/screens/pfx_before.jpg" alt="Project info old interface">
@@ -136,7 +214,9 @@ It was an amazing opportunity to create a good impact on day-to-day life of abou
   </div>
 </div>
 
-## More snaps
+---
+
+## More Snaps
 
 <div class="img-grid">
  <div class="gallery-item">
@@ -155,15 +235,12 @@ It was an amazing opportunity to create a good impact on day-to-day life of abou
     <img src="/screens/pfx_filler3.png" alt="Colors">
   </div>
   <div class="gallery-item">
-    <img src="/screens/pfx_filler4.png" alt="Artist dashboard wireframe - Ideation">
+    <img src="/screens/pfx_filler4.png" alt="Artist dashboard wireframe">
   </div>
   <div class="gallery-item">
-    <img src="/screens/pfx_filler5.png" alt="Project info wireframe - Ideation">
+    <img src="/screens/pfx_filler5.png" alt="Project info wireframe">
   </div>
   <div class="gallery-item">
-    <img src="/screens/pfx_filler6.png" alt="Project Quality check pipeline wireframe">
+    <img src="/screens/pfx_filler6.png" alt="Project quality check pipeline wireframe">
   </div>
- 
 </div>
-
-

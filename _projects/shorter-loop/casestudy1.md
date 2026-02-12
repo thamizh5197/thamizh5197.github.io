@@ -5,37 +5,52 @@ project: shorter-loop
 order: 1        
 hidden: true
 ---
-Shorter Loop was an early-stage startup aiming to help product teams conduct continuous discovery and build better products. I joined as the sole UX Designer and was later promoted to Product Manager after leading market and user research efforts and proposing a new roadmap backed by survey data. During my time, we raised $250K in funding and acquired our first paying customer, giving me valuable 0-to-1 product experience.
+
+Shorter Loop was an early-stage startup building tools to help product teams run continuous discovery and make better product decisions. I joined as the sole UX Designer and gradually stepped into product ownership after identifying a misalignment between what we were building and what users were actually willing to pay for.
+
+During my time, we raised $250K in funding and signed our first paying customer. My role evolved from designing features to shaping direction, prioritization, and validation in a resource-constrained, 0→1 environment.
+
+---
 
 ## Highlights
 
-- **Led transition from UX to Product** by identifying a misalignment between roadmap and user needs, and stepping up to drive research, strategy, and planning.
-
-- **Initiated and executed user research** including surveys and interviews that reshaped product direction.
-
-- **Proposed and validated new roadmap** introducing collaboration features like whiteboarding and docs based on real user pain points.
-
-- **Integrated generative AI** into the product, enabling automated feedback analysis, persona creation, and user story generation.
-
-- **Helped raise $250,000 in funding** by aligning product strategy with market needs and showing a clear vision.
-
-- **0 to 1 product experience** including shaping the core offering, refining it through iterations, and successfully onboarding the first paying customer.
-
-- **Worked cross-functionally** with design, engineering, founders, and marketing to bring ideas from research to production and launch.
-
-- **Led GTM preparation** through demos, events, and continuous feedback collection to prepare the product for launch and scale.
+- Identified a strategic gap between roadmap assumptions and real user needs, and stepped into product direction discussions within three months of joining  
+- Conducted 50+ user interviews and structured surveys to ground roadmap decisions in evidence  
+- Challenged a 6-month effort toward building a complex whiteboard feature, advocating instead for a simpler structured interface to validate the core workflow before heavy engineering investment  
+- Simplified onboarding to two focused steps and introduced guided activation, improving activation by **80%**  
+- Introduced practical AI-assisted workflows for feedback synthesis and persona generation  
+- Contributed to securing **$250,000 in funding** by helping clarify positioning and aligning the product around validated problems  
+- Designed under tight engineering bandwidth, prioritizing low-development-cost solutions that enabled faster iteration  
 
 ---
 
 ## The Journey
 
-### Joining the Team
+### Joining an Uncertain Direction
 
-I joined Shorter Loop as the only UX designer when the company was still figuring out its direction. The product aimed to help teams do better product discovery, but something felt off. The roadmap didn't reflect what real users actually needed, and our feature set lacked the clarity and depth needed to spark real adoption.
+When I joined, the ambition was clear but the execution path wasn’t. The roadmap was feature-heavy, yet user engagement remained shallow. The team believed expanding capabilities would drive traction, but adoption signals suggested we weren’t solving the right depth of problem.
 
-### Discovering the Gaps
+Within my first few months, I began questioning whether we were building impressive features instead of meaningful workflows.
 
-I started by talking to users, running surveys, and doing competitive analysis to understand what product teams were struggling with. The insight was clear: they wanted better ways to make sense of feedback, define problems, and collaborate without jumping across tools. These findings helped me reframe our internal conversations from "what features should we add" to "what are users trying to solve?"
+---
+
+### Discovering the Real Problem
+
+Through direct interviews, surveys, and competitive analysis, I spoke with product managers, founders, and discovery leads.
+
+A pattern emerged:
+
+Teams weren’t struggling because they lacked tools.  
+They were struggling because their discovery workflow was fragmented across tools.
+
+Feedback lived in one place, planning in another, and decisions somewhere else. The friction was in moving from **raw insight → structured understanding → action**.
+
+This reframed our internal conversations from  
+**“What feature should we add?”**  
+to  
+**“What decision workflow are we trying to support?”**
+
+---
 
 <div class="img-grid">
   <div class="gallery-item">
@@ -45,69 +60,137 @@ I started by talking to users, running surveys, and doing competitive analysis t
     <img src="/screens/SL_user_interview2.png" alt="User interview with industry expert">
   </div>
   <div class="gallery-item">
-    <img src="/screens/SL user research.png" alt="User interview with industry expert">
-  </div></div>
+    <img src="/screens/SL user research.png" alt="User research artifacts">
+  </div>
+</div>
 
-### Proposing a New Direction
+---
 
-Based on these insights, I proposed a revised roadmap that focused on solving core discovery and planning problems. One major theme was reducing tool fatigue—teams were bouncing between documents, whiteboards, spreadsheets, and ticketing systems. I introduced ideas around lightweight docs, in-app collaboration, and structured strategy tools.
+### The Whiteboard Decision
 
-Together with the founder, we validated these ideas through more interviews and early prototypes. We moved fast but deliberately—prioritising what aligned with user pain points and where we could differentiate. These changes gave us a clearer message and helped shift our positioning from just another feedback tool to a continuous discovery platform.
+One of the biggest turning points was around building a collaborative whiteboard.
 
-### Designing from the Ground Up
+The team had already invested months planning it. Competitors had similar features, and it looked compelling in demos. But user research revealed something different:
 
-I led the design of several new capabilities end to end—from research and prototyping to testing and launch.
+Users didn’t need infinite-canvas ideation.  
+They needed structured clarity.
 
-**Some highlights:**
+The real need was organizing and synthesizing insights, not freeform drawing.
 
-- Launched the **User Persona Canvas**, helping teams align on who they're building for
-- Built the **Feedback Manager**, enabling structured feedback capture and linking to delivery
-- Introduced an **in-app product strategy framework** to help teams move from objectives to solutions with more clarity
+Instead of committing further to a technically heavy whiteboard, I proposed validating the workflow through a **simpler table-based structured interface** first.
 
-Each of these was designed in tight feedback loops with users and tested before shipping. I also collaborated with engineering on feasibility and worked with the founder on how these would be demoed and positioned externally.
+This approach:
+- Reduced engineering complexity  
+- Enabled faster validation cycles  
+- Focused on decision-making rather than visual novelty  
+
+There was initial skepticism — especially since I had joined only three months earlier. I returned with structured interview findings and survey data to support the shift. That evidence helped realign the roadmap toward validation before complexity.
+
+This moment marked my transition from designer to product contributor.
+
+---
+
+### Redesigning Onboarding for Activation
+
+Another major friction point was onboarding.
+
+Users signed up but didn’t know what to do next. The product introduced too many concepts upfront, assuming familiarity with discovery frameworks.
+
+Instead of adding more explanations, I simplified onboarding to **two essential steps**:
+1. Clarify the problem space  
+2. Guide users to their first meaningful action  
+
+I also introduced in-product guidance focused on activation milestones rather than feature exploration.
+
+The goal wasn’t education — it was momentum.
+
+Activation improved by **80%** without adding new feature scope, simply by reducing cognitive overload and clarifying the first win.
+
+---
+
+### Designing Under Constraint
+
+Engineering bandwidth was limited, so every design decision had to balance user value with development cost.
+
+Rather than pushing for highly polished or interaction-heavy interfaces, I often chose **structurally clear, lightweight patterns** that delivered value without increasing technical burden.
+
+This constraint sharpened prioritization:
+- What must exist?  
+- What can wait?  
+- What can be simplified?  
+
+I learned to design not just for usability, but for feasibility and speed of learning.
+
+---
+
+### Bringing AI in Thoughtfully
+
+As generative AI gained momentum, I explored how it could support discovery workflows in practical ways.
+
+We started small:
+- Auto-categorizing feedback  
+- Summarizing insights  
+- Drafting personas  
+- Suggesting user stories  
+
+The principle was to reduce manual synthesis effort, not replace human judgment.
+
+These capabilities became strong demo differentiators and reinforced our positioning as a discovery-first platform.
+
+---
 
 <div class="img-grid">
-   <div class="gallery-item">
-    <img src="/screens/SL persona.jpg" alt="Persona Canvas redesign with AI Content Generation">
+  <div class="gallery-item">
+    <img src="/screens/SL persona.jpg" alt="Persona Canvas with AI assistance">
   </div>
   <div class="gallery-item">
-    <img src="/screens/sl4.jpg" alt="Feedback manager with AI Capabilities">
+    <img src="/screens/sl4.jpg" alt="Feedback manager with AI capabilities">
   </div>
   <div class="gallery-item">
-    <img src="/screens/sl6.jpg" alt="Product Strategy">
+    <img src="/screens/sl6.jpg" alt="Product strategy interface">
   </div>
-  </div>
+</div>
 
-### Bringing in AI
+---
 
-As generative AI gained momentum, I explored how it could meaningfully assist teams. We started small—auto categorising feedback and summarising insights. Over time, we expanded this to generate personas, suggest ideas, and draft user stories. The goal was always the same: help teams go from raw feedback to structured planning with less manual effort.
+### Earning Product Ownership
 
-These experiments became strong demo points and differentiators during early conversations with potential customers and investors.
+My transition into product direction wasn’t formal — it emerged from stepping into ambiguity.
 
-### Raising Funds and Building Traction
+At one point, the lead developer questioned the roadmap changes I proposed given my short tenure. I committed to returning with structured validation. In the following meeting, I presented synthesized research and survey data that reframed the opportunity and supported a shift in priorities.
 
-The strategic direction and clarity we gained helped us raise $250,000 in funding. More importantly, it gave us something real to show. Interest in demos picked up, and our trial sign-ups began increasing. Teams were more engaged, asking follow-up questions, and seeing potential in the platform.
+That moment established trust.
 
-I actively supported GTM efforts by shaping demo narratives, building walkthroughs, and highlighting use cases that resonated with different types of teams—from startups to education and enterprise.
+From then on, I wasn’t just designing screens — I was accountable for why we were building what we were building.
 
-### Getting to 0 to 1
+---
 
-We signed our first paying customer and started onboarding more teams steadily. That moment wasn't just a milestone—it was proof that the problems we were solving were real, and the way we were solving them made sense.
+### Getting to 0 → 1
 
-The transition from designer to product manager didn't happen in a formal way. It happened because I kept following the problem, took initiative on direction, and became accountable not just for what we built, but why we were building it. That journey gave me real 0-to-1 product experience and shaped how I think, prioritize, and lead today.
+We secured our first paying customer and raised $250K in funding. More importantly, we gained clarity. The product shifted from feature accumulation to problem alignment.
+
+Shorter Loop shaped how I think today:
+
+- Validate before scaling  
+- Simplify before expanding  
+- Align with revenue reality early  
+- Design within constraints, not ideal conditions  
+
+This wasn’t just a design role.  
+It was where I learned to connect user insight, feasibility, and business viability into one continuous loop.
+
+---
 
 ### More Designs
 
 <div class="img-grid">
- 
   <div class="gallery-item">
-    <img src="/screens/sl1.jpg" alt="A novel interface for creating product roadmaps">
-  </div>
-  
-  <div class="gallery-item">
-    <img src="/screens/sl3.jpg" alt="Product Strategy Empty state">
+    <img src="/screens/sl1.jpg" alt="Product roadmap interface">
   </div>
   <div class="gallery-item">
-    <img src="/screens/sl5.jpg" alt="Documentation for Product teams">
+    <img src="/screens/sl3.jpg" alt="Product strategy empty state">
+  </div>
+  <div class="gallery-item">
+    <img src="/screens/sl5.jpg" alt="Documentation interface for product teams">
   </div>
 </div>
