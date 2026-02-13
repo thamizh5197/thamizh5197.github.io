@@ -25,20 +25,20 @@ Joined as **sole UX Designer**, evolved into product ownership after identifying
 
 **Result:** secured first customer and helped raise **$250K funding**.
 
-## Problem
+#### Problem
 Discovery workflows were fragmented → insights weren’t turning into decisions.
 
-## Constraints
+#### Constraints
 0→1 stage · limited engineering bandwidth · unclear product direction
 
-## Approach
+#### Approach
 - Led interviews & research to ground decisions in evidence  
 - Reframed roadmap from **features → workflows**  
 - Replaced complex whiteboard plan with simpler structured validation  
 - Simplified onboarding & guided activation  
 - Introduced AI-assisted insight synthesis  
 
-## Impact
+#### Impact
 - **Activation ↑ 80%**  
 - **First paying customer**  
 - **$250K funding secured**  
