@@ -16,7 +16,7 @@ clink: https://phantomfx.com/
 slug: phantom-fx
 ---
 
-## Phantom FX — Production Workflow Transformation
+## Production Workflow Transformation
 
 **Internal production system for a VFX studio**
 

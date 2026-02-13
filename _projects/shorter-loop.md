@@ -17,7 +17,7 @@ skills: Product roadmaps, Product strategy, Cross-team Collaboration, User inter
 clink: https://www.shorterloop.com/
 ---
 
-## Shorter Loop — 0→1 Product Direction
+## 0→1 Product Direction
 
 **Early-stage discovery platform for product teams**
 

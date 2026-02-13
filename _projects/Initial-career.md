@@ -14,7 +14,7 @@ points:
 skills: Figma, UX Research, Prototyping, Remote user testing
 ---
 
-## Early Career — Building My Design Foundation
+## Building My Design Foundation
 
 **From software engineering to UX design**
 
