@@ -16,38 +16,34 @@ clink: https://phantomfx.com/
 slug: phantom-fx
 ---
 
-Phantom FX first approached me for freelance work on their internal production management system. After reviewing the tool and its impact on day-to-day studio operations, I proposed a full system rethink rather than a surface-level UI redesign. I later joined full-time to lead the transformation.
+## Phantom FX — Production Workflow Transformation
 
-The system was responsible for coordinating **200+ VFX artists and 15+ managers** across projects containing **10,000+ tasks each**. It was slow, confusing, and largely avoided by teams, with a System Usability Scale score below 10.
+**Internal production system for a VFX studio**
 
-### My Role & Approach
+Initially brought in for a UI refresh, I proposed a full system rethink after uncovering operational breakdowns. Joined full-time to redesign how 200+ artists and 15+ managers coordinate ~10,000 tasks per film project.
 
-* Conducted cross-department research to understand how production actually worked, not just how the software expected it to work
-* Discovered that the biggest issues were structural: rigid task logic, poor visibility into workloads, and heavy reliance on Excel outside the system
-* Reframed the challenge from a UI cleanup to a workflow and information architecture redesign
-* Simplified the system by introducing role-based dashboards, flexible subtasks, and on-demand data loading instead of heavy table views
-* Replaced manual resource tracking spreadsheets with a **Gantt-style scheduling view** that made artist availability and workload visible
-* Standardized terminology and removed unnecessary data fields to reduce cross-team confusion
-* Established a design system suited to the studio’s working environment, improving consistency and usability
+**Result:** transformed a failing tool into a trusted operational system.
 
-### The Impact
+### Problem
+The production tool didn’t reflect real studio workflows → teams relied on Excel and workarounds.
 
-* Increased adoption from under 10% to widespread daily use across departments
-* Improved System Usability Scale score from below 10 to **90+**
-* Reduced reliance on parallel Excel workflows by bringing real operational visibility into the product
-* Turned a frustrating internal tool into a trusted system that supported production planning and decision-making
+### Constraints
+Legacy backend · live production environment · heavy datasets · cross-department needs
 
-This project taught me how deeply design can influence operational efficiency — not just by improving interfaces, but by aligning systems with how people actually work.
+### Approach
+- Conducted cross-functional research across 8 departments  
+- Reframed UI cleanup into workflow & system redesign  
+- Rebuilt information architecture around real operations  
+- Introduced Gantt-based scheduling to replace Excel tracking  
+- Optimized data loading to reduce performance bottlenecks  
+- Standardized terminology & reduced cognitive noise  
+- Designed role-specific dashboards & operational metrics  
 
+### Impact
+- Adoption increased from **<10% → 97%**  
+- System Usability Scale improved to **90+**  
+- Eliminated parallel Excel workflows  
+- Significantly improved load performance  
+- Enabled real-time operational visibility  
 
-Snaps:
-
-<div class="collage">
-  <img src="/screens/pfx summary.jpg" alt="work sample 1" >
-  <img src="/screens/pfx gantt chart.jpg" alt="work sample 2" >
-  <img src="/screens/pfx modal.jpg" alt="work sample 4" >
-  <img src="/screens/pfx landing page.jpg" alt="work sample 5" >
-  <img src="/screens/pfx-project-view.jpg" alt="work sample 6" >
-</div>
-
-
+**[Deep dive →](https://thamizh5197.github.io/projects/phantom-fx/casestudy1.html)**

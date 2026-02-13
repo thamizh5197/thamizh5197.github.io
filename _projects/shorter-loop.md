@@ -17,25 +17,32 @@ skills: Product roadmaps, Product strategy, Cross-team Collaboration, User inter
 clink: https://www.shorterloop.com/
 ---
 
-Shorter Loop was an early-stage startup helping product teams run continuous discovery. I joined as the sole UX Designer and gradually stepped into product ownership after identifying a misalignment between what we were building and what users were actually willing to pay for.
+## Shorter Loop — 0→1 Product Direction
 
-During my time, we raised **$250K in funding** and signed our **first paying customer**. My role evolved from designing features to shaping product direction, prioritization, and validation in a 0→1 environment with limited engineering bandwidth.
+**Early-stage discovery platform for product teams**
 
-### My Role & Approach
+Joined as **sole UX Designer**, evolved into product ownership after identifying a gap between roadmap assumptions and what users would actually pay for.
 
-* Brought evidence into product decisions by leading user interviews, surveys, and competitive research
-* Identified gaps between roadmap assumptions and real user workflows, reframing discussions from *feature output* to *problem alignment*
-* Challenged technically heavy solutions (like a planned whiteboard feature) in favor of simpler structures to validate workflows faster and with lower engineering cost
-* Redesigned onboarding to reduce cognitive overload and guide users toward meaningful first actions, improving activation by **80%**
-* Designed core discovery and strategy features end-to-end, balancing usability with feasibility in a small team
-* Introduced practical AI-assisted workflows to help teams synthesize feedback and move faster from insight to action
-* Partnered with founders on demos, positioning, and early GTM efforts
+**Result:** secured first customer and helped raise **$250K funding**.
 
-### The Impact
+### Problem
+Discovery workflows were fragmented → insights weren’t turning into decisions.
 
-* Helped secure **$250K in funding** by aligning product direction with validated market needs
-* Contributed to signing the **first paying customer**, moving the product from concept to commercial validation
-* Shifted the team from assumption-led to research-informed product decisions
-* Transitioned from UX Designer to Product Manager by taking ownership of not just *how* we built, but *what* and *why*
+###  Constraints
+0→1 stage · limited engineering bandwidth · unclear product direction
 
-This experience shaped how I approach product design today: validate early, simplify aggressively, and design within real-world constraints rather than ideal conditions.
+###  Approach
+- Led interviews & research to ground decisions in evidence  
+- Reframed roadmap from **features → workflows**  
+- Replaced complex whiteboard plan with simpler structured validation  
+- Simplified onboarding & guided activation  
+- Introduced AI-assisted insight synthesis  
+
+###  Impact
+- **Activation ↑ 80%**  
+- **First paying customer**  
+- **$250K funding secured**  
+- Shift to research-driven product decisions  
+- Transitioned into product leadership  
+
+**[Deep dive →](https://thamizh5197.github.io/projects/shorter-loop/casestudy1.html)**

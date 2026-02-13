@@ -14,29 +14,35 @@ points:
 skills: Figma, UX Research, Prototyping, Remote user testing
 ---
 
-After completing my Master’s in Software Engineering, I realized that while I could code, I didn’t enjoy it enough to see myself pursuing it long term. I took time to explore where my interests truly lay and found that UX design combined what I loved most: technology, design, psychology, and empathy for people.
+## Early Career — Building My Design Foundation
 
-Before joining larger companies, I built my foundation as a designer through personal projects, freelance work, and collaborations with smaller businesses. These experiences gave me hands-on exposure to the full design process and helped me develop the core skills I carry into my work today.
+**From software engineering to UX design**
 
-## My Role
+After completing my Master’s in Software Engineering, I realized my strengths aligned more with designing solutions than writing code. I began exploring UX through personal projects, freelance work, and collaborations with small businesses.
 
-* Revamped websites to improve usability, structure, and aesthetics
-* Designed both **web and mobile applications**, including everyday products like grocery apps
-* Created **information architectures, wireframes, and prototypes** to shape user flows and product functionality
-* Conducted **user interviews and usability testing sessions** to gather feedback and validate design choices
-* Built **design systems** to bring consistency and scalability to client projects
-* Presented directly to clients, translating business needs into practical design solutions
-* published a personal project app to the Play Store
+This phase built the foundation of my design thinking, research skills, and end-to-end product approach.
 
-## The Impact
+### Problem
+Small teams needed usable, structured digital products but lacked design expertise and process.
 
-* Delivered functional, user-friendly websites and apps that helped small teams and startups improve their digital presence
-* Introduced structured design practices (design systems, testing, IA) where none existed before
-* Developed a strong foundation in client communication, research, and end-to-end product design
-* Built the skills and confidence that enabled me to transition into larger companies and more complex product challenges
-* Released a personal project app on the Play Store that earned a 4.5★ rating, validating both design quality and user value
+### Constraints
+Limited budgets · fast timelines · undefined requirements · no existing design systems
 
-This phase of my career was less about recognition and more about building the craft learning how to solve real problems, adapt quickly, and grow into the designer I am today.
+### Approach
+- Redesigned websites to improve usability, structure, and clarity  
+- Designed web & mobile apps, including everyday utility products  
+- Created information architecture, wireframes, and interactive prototypes  
+- Conducted user interviews and usability testing to validate decisions  
+- Built design systems to ensure consistency and scalability  
+- Collaborated directly with clients to translate business needs into practical solutions  
+- Published a personal project app to the Play Store  
+
+### Impact
+- Delivered user-friendly products that improved digital presence for small teams  
+- Introduced structured design practices where none existed  
+- Built strong foundations in research, UX thinking, and client communication  
+- Developed end-to-end product design capability  
+- Released a Play Store app with a **4.5★ rating**, validating real user value  
 
 Snaps:
 
