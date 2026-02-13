@@ -24,13 +24,13 @@ Initially brought in for a UI refresh, I proposed a full system rethink after un
 
 **Result:** transformed a failing tool into a trusted operational system.
 
-### Problem
+## Problem
 The production tool didn’t reflect real studio workflows → teams relied on Excel and workarounds.
 
-### Constraints
+## Constraints
 Legacy backend · live production environment · heavy datasets · cross-department needs
 
-### Approach
+## Approach
 - Conducted cross-functional research across 8 departments  
 - Reframed UI cleanup into workflow & system redesign  
 - Rebuilt information architecture around real operations  
@@ -39,7 +39,7 @@ Legacy backend · live production environment · heavy datasets · cross-departm
 - Standardized terminology & reduced cognitive noise  
 - Designed role-specific dashboards & operational metrics  
 
-### Impact
+## Impact
 - Adoption increased from **<10% → 97%**  
 - System Usability Scale improved to **90+**  
 - Eliminated parallel Excel workflows  

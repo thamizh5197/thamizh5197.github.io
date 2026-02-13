@@ -22,13 +22,13 @@ After completing my Master’s in Software Engineering, I realized my strengths 
 
 This phase built the foundation of my design thinking, research skills, and end-to-end product approach.
 
-### Problem
+## Problem
 Small teams needed usable, structured digital products but lacked design expertise and process.
 
-### Constraints
+## Constraints
 Limited budgets · fast timelines · undefined requirements · no existing design systems
 
-### Approach
+## Approach
 - Redesigned websites to improve usability, structure, and clarity  
 - Designed web & mobile apps, including everyday utility products  
 - Created information architecture, wireframes, and interactive prototypes  
@@ -37,7 +37,7 @@ Limited budgets · fast timelines · undefined requirements · no existing desig
 - Collaborated directly with clients to translate business needs into practical solutions  
 - Published a personal project app to the Play Store  
 
-### Impact
+## Impact
 - Delivered user-friendly products that improved digital presence for small teams  
 - Introduced structured design practices where none existed  
 - Built strong foundations in research, UX thinking, and client communication  
