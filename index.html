@@ -2,6 +2,9 @@
 layout: default
 title: Portfolio
 ---
+<a href="/flashy" class="flashy-switch">✦ Flashy view</a>
+<script>localStorage.removeItem('flashyMode');</script>
+
 <div class="sidebar">
   <h1>{{ site.data.bio.name }}</h1>
   <p>
@@ -368,6 +371,26 @@ title: Portfolio
   .case-studies-list a:hover {
     color: #5a3fb8;
     text-decoration: underline;
+  }
+
+  .flashy-switch {
+    position: fixed;
+    bottom: 1.2rem;
+    right: 1.2rem;
+    z-index: 999;
+    background: rgba(139,92,246,0.12);
+    border: 1px solid rgba(139,92,246,0.35);
+    color: #7c5cbf;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+  }
+  .flashy-switch:hover {
+    background: rgba(139,92,246,0.25);
+    color: #a78bfa;
   }
 
   /* Mobile Responsiveness */

@@ -1,0 +1,898 @@
+---
+layout: default
+title: Thamizh Selvan — Portfolio
+---
+
+<div class="f-root">
+
+  <!-- Animated gradient mesh background -->
+  <div class="f-bg">
+    <div class="f-blob f-blob-1"></div>
+    <div class="f-blob f-blob-2"></div>
+    <div class="f-blob f-blob-3"></div>
+    <div class="f-blob f-blob-4"></div>
+    <div class="f-noise"></div>
+  </div>
+
+  <!-- Hero -->
+  <section class="f-hero">
+    <div class="f-hero-inner">
+      <p class="f-eyebrow">Product Manager · UX Designer</p>
+      <h1 class="f-name" id="f-name">Thamizh Selvan</h1>
+      <p class="f-tagline" id="f-tagline"></p>
+      <div class="f-hero-links">
+        <a href="mailto:{{ site.data.bio.email }}" class="f-btn f-btn-primary">Get in touch</a>
+        <a href="{{ site.data.bio.resume }}" target="_blank" class="f-btn f-btn-ghost">Resume</a>
+      </div>
+    </div>
+    <div class="f-scroll-hint">
+      <span>scroll</span>
+      <div class="f-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Work section -->
+  <section class="f-work">
+    <div class="f-section-header">
+      <h2 class="f-section-title">Work</h2>
+      <div class="f-marquee-wrap">
+        <div class="f-marquee">
+          <span>Product Strategy · UX Design · Systems Thinking · 0→1 · Roadmapping · Stakeholder Alignment · Research · Prototyping · Product Strategy · UX Design · Systems Thinking · 0→1 · Roadmapping · Stakeholder Alignment · Research · Prototyping ·&nbsp;</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-cards">
+      {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+      {% for project in sorted_projects %}
+      {% unless project.hidden %}
+      <div class="f-card">
+        <div class="f-card-glow"></div>
+        <div class="f-card-inner">
+          <div class="f-card-top">
+            <div>
+              <h3 class="f-card-role">{{ project.role }}</h3>
+              {% if project.clink %}
+              <a href="{{ project.clink }}" class="f-card-company" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">{{ project.company }} ↗</a>
+              {% else %}
+              <span class="f-card-company">{{ project.company }}</span>
+              {% endif %}
+            </div>
+            <span class="f-card-duration">{{ project.from }}–{{ project.to }}</span>
+          </div>
+
+          <div class="f-chips">
+            {% for point in project.points %}
+            {% assign point_lower = point | downcase %}
+            {% assign chip_class = "fc-default" %}
+            {% if point_lower contains "increase" or point_lower contains "improved" or point_lower contains "higher" or point_lower contains "grew" or point_lower contains "boost" or point_lower contains "sus score" %}{% assign chip_class = "fc-success" %}
+            {% elsif point_lower contains "secured" or point_lower contains "first" or point_lower contains "acquired" or point_lower contains "signed" %}{% assign chip_class = "fc-success" %}
+            {% elsif point_lower contains "reduced" or point_lower contains "faster" or point_lower contains "saved" or point_lower contains "decreased" %}{% assign chip_class = "fc-info" %}
+            {% elsif point_lower contains "funding" or point_lower contains "raise" or point_lower contains "$" or point_lower contains "investment" %}{% assign chip_class = "fc-gold" %}
+            {% elsif point_lower contains "customer" or point_lower contains "user" %}{% assign chip_class = "fc-purple" %}
+            {% endif %}
+            <span class="f-chip {{ chip_class }}">{{ point }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="f-card-footer">
+            {% if project.url %}
+            <a href="{{ project.url }}" class="f-card-link" onclick="event.stopPropagation()">Overview →</a>
+            {% endif %}
+            {% assign case_studies = site.projects | where: "project", project.slug | where: "layout", "case-study" | sort: "order" %}
+            {% if case_studies.size > 0 %}
+            <div class="f-card-case-studies">
+              <span class="f-card-case-label">Case Studies</span>
+              <div class="f-card-case-links">
+                {% for cs in case_studies %}
+                <a href="{{ cs.url }}" class="f-card-link" onclick="event.stopPropagation()">{{ cs.title }} →</a>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endunless %}
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Gallery reveal section -->
+  <section class="f-gallery">
+    <div class="f-section-header">
+      <h2 class="f-section-title">Design Snaps</h2>
+      <p class="f-gallery-hint">✦ Wave your wand over the cards to reveal</p>
+    </div>
+    <div class="f-gallery-grid">
+      {% assign images = site.static_files | where_exp: "file", "file.path contains '/screens/'" %}
+      {% for image in images %}
+      <div class="f-reveal-card">
+        <img src="{{ image.path }}" alt="">
+        <canvas class="f-reveal-canvas"></canvas>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- Switch view -->
+  <a href="{{ '/' | relative_url }}" class="f-switch">← Minimal view</a>
+
+</div>
+
+<style>
+/* ── Reset within flashy ── */
+.f-root {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  color: #f0f0f0;
+  overflow-x: hidden;
+}
+
+/* ── Gradient mesh background ── */
+.f-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: #0a0a12;
+  overflow: hidden;
+}
+
+/* Blob styles live in style.css */
+
+/* ── All content above bg ── */
+.f-hero,
+.f-work,
+.f-switch {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hero ── */
+.f-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 6vw;
+}
+
+.f-hero-inner {
+  max-width: 900px;
+}
+
+.f-eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8888cc;
+  margin-bottom: 1.2rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.2s forwards;
+}
+
+.f-name {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    #fff       0%,
+    #a78bfa   20%,
+    #60a5fa   40%,
+    rgba(255,255,255,0.95) 55%,
+    rgba(255,255,255,0.95) 62%,
+    transparent 78%,
+    transparent 100%
+  );
+  background-size: 300% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: nameSweep 1.4s 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes nameSweep {
+  to { background-position: 0% 0; }
+}
+
+.f-tagline {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: #9090b0;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  min-height: 2em;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.6s forwards;
+}
+
+.f-hero-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.7s 0.9s forwards;
+}
+
+.f-btn {
+  padding: 0.7rem 1.6rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.f-btn-primary {
+  background: rgba(139, 92, 246, 0.85);
+  color: #fff;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+}
+.f-btn-primary:hover {
+  background: rgba(139, 92, 246, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(139, 92, 246, 0.4);
+}
+
+.f-btn-ghost {
+  background: rgba(255,255,255,0.05);
+  color: #ccc;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.f-btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Scroll hint */
+.f-scroll-hint {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #555577;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeUp 0.7s 1.2s forwards;
+}
+
+.f-scroll-line {
+  width: 40px;
+  height: 1px;
+  background: #555577;
+  position: relative;
+  overflow: hidden;
+}
+.f-scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: #a78bfa;
+  animation: scrollLine 2s 1.5s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0%   { left: -100%; }
+  50%  { left: 0%; }
+  100% { left: 100%; }
+}
+
+/* ── Work section ── */
+.f-work {
+  padding: 6rem 6vw 8rem;
+}
+
+.f-section-header {
+  margin-bottom: 3rem;
+}
+
+.f-section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #fff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+/* Marquee */
+.f-marquee-wrap {
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.6rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.f-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+  color: #555577;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Cards ── */
+.f-cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.f-cards {
+  perspective: 1000px;
+}
+
+.f-card {
+  position: relative;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.4s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.f-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease;
+}
+
+.f-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+/* Glow on hover */
+.f-card-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(139,92,246,0.08), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.f-card:hover .f-card-glow {
+  opacity: 1;
+}
+
+.f-card-inner {
+  padding: 1.8rem 2rem;
+}
+
+.f-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.2rem;
+  gap: 1rem;
+}
+
+.f-card-role {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-bottom: 0.3rem;
+}
+
+.f-card-company {
+  font-size: 0.9rem;
+  color: #a78bfa;
+  text-decoration: none;
+}
+.f-card-company:hover {
+  text-decoration: underline;
+}
+
+.f-card-duration {
+  font-size: 0.8rem;
+  color: #555577;
+  white-space: nowrap;
+  margin-top: 0.2rem;
+}
+
+/* Chips */
+.f-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.f-chip {
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.fc-success { background: rgba(52,211,153,0.12); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.25); }
+.fc-info    { background: rgba(96,165,250,0.12); color: #93c5fd; border: 1px solid rgba(96,165,250,0.25); }
+.fc-gold    { background: rgba(251,191,36,0.12); color: #fcd34d; border: 1px solid rgba(251,191,36,0.25); }
+.fc-purple  { background: rgba(167,139,250,0.12); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.25); }
+.fc-default { background: rgba(255,255,255,0.05); color: #9090b0; border: 1px solid rgba(255,255,255,0.1); }
+
+/* Card footer links */
+.f-card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 1rem;
+}
+
+.f-card-link {
+  font-size: 0.88rem;
+  color: #7878aa;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.f-card-link:hover {
+  color: #a78bfa;
+}
+
+.f-card-case-studies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.f-card-case-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #444466;
+}
+
+.f-card-case-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* ── Gallery reveal ── */
+.f-gallery {
+  padding: 0 6vw 6rem;
+}
+
+.f-gallery-hint {
+  font-size: 0.85rem;
+  color: #555577;
+  letter-spacing: 0.05em;
+  margin-top: -0.5rem;
+  margin-bottom: 2rem;
+}
+
+.f-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.f-reveal-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+.f-reveal-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.f-reveal-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.f-reveal-hint {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.7rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.45);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  pointer-events: none;
+  animation: fadeUp 0.5s ease forwards;
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 768px) {
+  .f-gallery { padding: 0 1.5rem 4rem; }
+  .f-gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 0.8rem; }
+}
+
+/* ── Switch view button ── */
+.f-switch {
+  display: block;
+  text-align: center;
+  padding: 3rem;
+  color: #444466;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.f-switch:hover {
+  color: #a78bfa;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Hide default cursor on flashy page ── */
+.f-root, .f-root * {
+  cursor: none !important;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .f-hero { padding: 0 1.5rem; }
+  .f-work { padding: 4rem 1.5rem 6rem; }
+  .f-scroll-hint { left: 1.5rem; }
+  .f-card-inner { padding: 1.4rem; }
+  .f-card-top { flex-direction: column; gap: 0.3rem; }
+}
+</style>
+
+<script>
+// Mark flashy mode for child pages
+localStorage.setItem('flashyMode', '1');
+
+// Typewriter for tagline
+(function() {
+  var text = "Product thinker with 6+ years turning messy, ambiguous problems into structured, usable systems.";
+  var el = document.getElementById('f-tagline');
+  var i = 0;
+  setTimeout(function type() {
+    if (i < text.length) {
+      el.textContent += text[i++];
+      setTimeout(type, 22);
+    }
+  }, 900);
+})();
+
+// Scroll-triggered card reveal
+(function() {
+  var cards = document.querySelectorAll('.f-card');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry, idx) {
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+          entry.target.classList.add('visible');
+        }, idx * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  cards.forEach(function(card) { observer.observe(card); });
+})();
+
+// 3D tilt + glow on cards
+(function() {
+  document.querySelectorAll('.f-card').forEach(function(card) {
+    card.addEventListener('mousemove', function(e) {
+      var rect = card.getBoundingClientRect();
+      var dx = (e.clientX - (rect.left + rect.width  / 2)) / (rect.width  / 2);
+      var dy = (e.clientY - (rect.top  + rect.height / 2)) / (rect.height / 2);
+      card.style.transition = 'border-color 0.3s ease, transform 0.08s ease';
+      card.style.transform = 'rotateX(' + (dy * -7) + 'deg) rotateY(' + (dx * 7) + 'deg) translateZ(10px)';
+      // glow follows mouse
+      card.style.setProperty('--mx', ((e.clientX - rect.left) / rect.width  * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', ((e.clientY - rect.top)  / rect.height * 100).toFixed(1) + '%');
+    });
+    card.addEventListener('mouseleave', function() {
+      card.style.transition = 'border-color 0.3s ease, transform 0.5s ease';
+      card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0px)';
+    });
+  });
+})();
+
+// Scroll progress bar
+(function() {
+  var bar = document.createElement('div');
+  bar.style.cssText = [
+    'position:fixed;top:0;left:0;height:2px;width:0%;',
+    'z-index:99997;pointer-events:none;',
+    'background:linear-gradient(90deg,#a78bfa,#60a5fa,#a78bfa);',
+    'box-shadow:0 0 8px rgba(167,139,250,0.9);',
+    'transition:width 0.1s linear;'
+  ].join('');
+  document.body.appendChild(bar);
+
+  window.addEventListener('scroll', function() {
+    var total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (total > 0 ? window.scrollY / total * 100 : 0) + '%';
+  }, { passive: true });
+})();
+
+// ── Scratch reveal gallery ──
+(function() {
+  var cards    = Array.from(document.querySelectorAll('.f-reveal-card'));
+  var canvases = Array.from(document.querySelectorAll('.f-reveal-canvas'));
+  var revealed = canvases.map(function() { return false; });
+  var scratches = canvases.map(function() { return 0; });
+
+  function drawCardBack(canvas) {
+    var dpr = window.devicePixelRatio || 1;
+    var rect = canvas.getBoundingClientRect();
+    var w = rect.width, h = rect.height;
+    canvas.width  = w * dpr;
+    canvas.height = h * dpr;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+
+    // Background
+    var bg = ctx.createLinearGradient(0, 0, w, h);
+    bg.addColorStop(0, '#12062a');
+    bg.addColorStop(1, '#080e24');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, w, h);
+
+    // Subtle grid
+    ctx.strokeStyle = 'rgba(167,139,250,0.07)';
+    ctx.lineWidth = 1;
+    for (var x = 0; x < w; x += 22) { ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,h); ctx.stroke(); }
+    for (var y = 0; y < h; y += 22) { ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(w,y); ctx.stroke(); }
+
+    // Border
+    ctx.strokeStyle = 'rgba(167,139,250,0.3)';
+    ctx.lineWidth = 1.5;
+    ctx.strokeRect(3, 3, w - 6, h - 6);
+
+    // Corner stars
+    [[w*0.12,h*0.12],[w*0.88,h*0.12],[w*0.12,h*0.88],[w*0.88,h*0.88]].forEach(function(p) {
+      drawMiniStar(ctx, p[0], p[1], 5);
+    });
+
+    // Center symbol + text
+    ctx.fillStyle = 'rgba(167,139,250,0.7)';
+    ctx.font = '28px serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('✦', w / 2, h / 2 - 14);
+
+    ctx.fillStyle = 'rgba(167,139,250,0.38)';
+    ctx.font = '500 11px Inter, sans-serif';
+    ctx.fillText('wave to reveal', w / 2, h / 2 + 12);
+  }
+
+  function drawMiniStar(ctx, cx, cy, r) {
+    ctx.fillStyle = 'rgba(167,139,250,0.3)';
+    ctx.beginPath();
+    for (var i = 0; i < 8; i++) {
+      var a = (i * Math.PI) / 4 - Math.PI / 8;
+      var rad = i % 2 === 0 ? r : r * 0.4;
+      i === 0 ? ctx.moveTo(cx + Math.cos(a)*rad, cy + Math.sin(a)*rad)
+              : ctx.lineTo(cx + Math.cos(a)*rad, cy + Math.sin(a)*rad);
+    }
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // Init after layout
+  setTimeout(function() {
+    canvases.forEach(function(c) { drawCardBack(c); });
+  }, 200);
+
+  // Reinit on resize
+  window.addEventListener('resize', function() {
+    canvases.forEach(function(c, i) { if (!revealed[i]) drawCardBack(c); });
+  });
+
+  function checkReveal(canvas, i) {
+    var ctx = canvas.getContext('2d');
+    var data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    var transparent = 0, total = data.length / 4;
+    for (var j = 3; j < data.length; j += 4) { if (data[j] < 100) transparent++; }
+    if (transparent / total > 0.6) {
+      revealed[i] = true;
+      canvas.style.transition = 'opacity 0.9s ease';
+      canvas.style.opacity = '0';
+      setTimeout(function() {
+        canvas.style.display = 'none';
+        // Show expand hint
+        var hint = document.createElement('div');
+        hint.className = 'f-reveal-hint';
+        hint.textContent = '⤢ click to expand';
+        cards[i].appendChild(hint);
+        cards[i].style.cursor = 'pointer';
+      }, 900);
+    }
+  }
+
+  document.addEventListener('mousemove', function(e) {
+    canvases.forEach(function(canvas, i) {
+      if (revealed[i]) return;
+      var rect = canvas.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height) return;
+
+      var dpr = window.devicePixelRatio || 1;
+      var ctx = canvas.getContext('2d');
+      ctx.globalCompositeOperation = 'destination-out';
+      var grd = ctx.createRadialGradient(x*dpr, y*dpr, 0, x*dpr, y*dpr, 36*dpr);
+      grd.addColorStop(0,   'rgba(0,0,0,1)');
+      grd.addColorStop(0.5, 'rgba(0,0,0,0.85)');
+      grd.addColorStop(1,   'rgba(0,0,0,0)');
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      ctx.arc(x*dpr, y*dpr, 36*dpr, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.globalCompositeOperation = 'source-over';
+
+      scratches[i]++;
+      if (scratches[i] % 12 === 0) checkReveal(canvas, i);
+    });
+  });
+})();
+
+// ── Wand cursor with glitter ──
+(function() {
+  var canvas = document.createElement('canvas');
+  canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:99998;';
+  document.body.appendChild(canvas);
+  var ctx = canvas.getContext('2d');
+
+  function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var wand = document.createElement('div');
+  wand.style.cssText = 'position:fixed;top:0;left:0;pointer-events:none;z-index:99999;will-change:transform;';
+  wand.innerHTML = [
+    '<svg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">',
+    '  <defs>',
+    '    <filter id="wglow"><feGaussianBlur stdDeviation="2.5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>',
+    '  </defs>',
+    '  <line x1="58" y1="8" x2="14" y2="68" stroke="#3b1a06" stroke-width="6" stroke-linecap="round"/>',
+    '  <line x1="58" y1="8" x2="14" y2="68" stroke="#7c3f12" stroke-width="3.5" stroke-linecap="round" opacity="0.7"/>',
+    '  <line x1="58" y1="8" x2="14" y2="68" stroke="#c47a3a" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>',
+    '  <ellipse cx="14" cy="68" rx="5" ry="4" fill="#2a0f02" opacity="0.9"/>',
+    '  <circle cx="58" cy="8" r="4" fill="#fff" opacity="0.95" filter="url(#wglow)"/>',
+    '  <circle cx="58" cy="8" r="8" fill="#a78bfa" opacity="0.25"/>',
+    '</svg>'
+  ].join('');
+  document.body.appendChild(wand);
+
+  var mx = -300, my = -300;
+
+  document.addEventListener('mousemove', function(e) {
+    mx = e.clientX; my = e.clientY;
+    wand.style.transform = 'translate(' + (mx - 58) + 'px,' + (my - 8) + 'px)';
+  });
+
+  var colors = ['#FFD700','#FFC400','#a78bfa','#c4b5fd','#60a5fa','#f0abfc','#ffffff','#e2c2ff','#93c5fd'];
+  var particles = [];
+
+  function spawnGlitter(x, y, count) {
+    for (var i = 0; i < count; i++) {
+      var angle = Math.random() * Math.PI * 2;
+      var speed = Math.random() * 2.5 + 0.5;
+      particles.push({
+        x: x + (Math.random() - 0.5) * 6,
+        y: y + (Math.random() - 0.5) * 6,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed - Math.random() * 2,
+        size: Math.random() * 2.5 + 0.8,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        life: 1,
+        decay: Math.random() * 0.018 + 0.01,
+        rot: Math.random() * Math.PI * 2,
+        rotV: (Math.random() - 0.5) * 0.25,
+        isStar: Math.random() > 0.4
+      });
+    }
+  }
+
+  function drawStar4(x, y, r, color, alpha) {
+    ctx.save();
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = color;
+    ctx.shadowBlur = 5;
+    ctx.shadowColor = color;
+    ctx.beginPath();
+    for (var i = 0; i < 8; i++) {
+      var a = (i * Math.PI) / 4;
+      var rad = i % 2 === 0 ? r : r * 0.35;
+      i === 0 ? ctx.moveTo(Math.cos(a)*rad, Math.sin(a)*rad)
+              : ctx.lineTo(Math.cos(a)*rad, Math.sin(a)*rad);
+    }
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+  }
+
+  var lastTime = 0;
+  var prevMx = mx, prevMy = my;
+
+  function animate(ts) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    var dx = mx - prevMx, dy = my - prevMy;
+    var speed = Math.sqrt(dx*dx + dy*dy);
+    if (ts - lastTime > 25) {
+      var count = speed > 8 ? 5 : speed > 2 ? 3 : 1;
+      if (mx > 0) spawnGlitter(mx, my, count);
+      prevMx = mx; prevMy = my;
+      lastTime = ts;
+    }
+
+    if (mx > 0) {
+      var grd = ctx.createRadialGradient(mx, my, 0, mx, my, 18);
+      grd.addColorStop(0, 'rgba(200,170,255,0.35)');
+      grd.addColorStop(1, 'rgba(167,139,250,0)');
+      ctx.fillStyle = grd;
+      ctx.beginPath();
+      ctx.arc(mx, my, 18, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    for (var i = particles.length - 1; i >= 0; i--) {
+      var p = particles[i];
+      p.x += p.vx; p.y += p.vy;
+      p.vy += 0.07; p.vx *= 0.985;
+      p.life -= p.decay;
+      p.rot += p.rotV;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
+
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      if (p.isStar) {
+        drawStar4(0, 0, p.size, p.color, p.life);
+      } else {
+        ctx.globalAlpha = p.life;
+        ctx.fillStyle = p.color;
+        ctx.shadowBlur = 4;
+        ctx.shadowColor = p.color;
+        ctx.beginPath();
+        ctx.arc(0, 0, p.size * 0.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+})();
+</script>

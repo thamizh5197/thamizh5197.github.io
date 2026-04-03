@@ -6,7 +6,7 @@
   // Initialize lightbox when DOM is ready
   function initLightbox() {
     // Get all images that should have lightbox
-const galleryItems = document.querySelectorAll('.gallery-item img, .collage img, .img-grid img, .project-description img');    
+const galleryItems = document.querySelectorAll('.gallery-item img, .collage img, .img-grid img, .project-description img, .f-reveal-card img');
     images = Array.from(galleryItems).map((img, index) => {
       const caption = img.getAttribute('alt') || 
                      img.getAttribute('data-caption') || 

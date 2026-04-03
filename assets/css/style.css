@@ -721,3 +721,160 @@ body {
 [data-theme="dark"] .case-content a {
   color: var(--accent-color);
 }
+
+/* ============================================
+   FLASHY MODE — SHARED BLOB BACKGROUND
+   ============================================ */
+
+#fim-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: #0a0a12;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.f-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+}
+.f-blob-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, #3b1fa8, transparent 70%);
+  top: -150px; left: -100px;
+  animation: blobFloat1 14s ease-in-out infinite;
+}
+.f-blob-2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #0e5fa8, transparent 70%);
+  top: 20%; right: -80px;
+  animation: blobFloat2 18s ease-in-out infinite;
+}
+.f-blob-3 {
+  width: 450px; height: 450px;
+  background: radial-gradient(circle, #6b21a8, transparent 70%);
+  bottom: 10%; left: 30%;
+  animation: blobFloat3 20s ease-in-out infinite;
+}
+.f-blob-4 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, #0f4c75, transparent 70%);
+  bottom: -80px; right: 20%;
+  animation: blobFloat4 16s ease-in-out infinite;
+}
+@keyframes blobFloat1 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(60px,40px) scale(1.08); }
+  66%      { transform: translate(-30px,60px) scale(0.95); }
+}
+@keyframes blobFloat2 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  40%      { transform: translate(-50px,60px) scale(1.1); }
+  70%      { transform: translate(30px,-40px) scale(0.92); }
+}
+@keyframes blobFloat3 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  30%      { transform: translate(70px,-50px) scale(1.05); }
+  60%      { transform: translate(-40px,30px) scale(1.12); }
+}
+@keyframes blobFloat4 {
+  0%,100% { transform: translate(0,0) scale(1); }
+  50%      { transform: translate(-60px,-40px) scale(1.1); }
+}
+.f-noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* Progress bar */
+#fim-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px; width: 0%;
+  z-index: 99997;
+  pointer-events: none;
+  background: linear-gradient(90deg, #a78bfa, #60a5fa, #a78bfa);
+  box-shadow: 0 0 8px rgba(167,139,250,0.9);
+  transition: width 0.1s linear;
+}
+
+/* ── Flashy mode layout overrides ── */
+body.flashy-mode {
+  background: #0a0a12;
+  cursor: none !important;
+}
+body.flashy-mode * {
+  cursor: none !important;
+}
+body.flashy-mode .container,
+body.flashy-mode .case-container {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+body.flashy-mode .sidebar,
+body.flashy-mode .case-index,
+body.flashy-mode .project-sidebar {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 1.5rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+body.flashy-mode .work-card {
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.08);
+}
+body.flashy-mode .back-button,
+body.flashy-mode .back-link {
+  color: #a78bfa !important;
+  background: transparent !important;
+}
+body.flashy-mode .project-content,
+body.flashy-mode .case-content {
+  position: relative;
+  z-index: 1;
+  padding-top: 1.5rem;
+}
+body.flashy-mode .project-container,
+body.flashy-mode .case-container {
+  position: relative;
+  z-index: 1;
+  padding: 0 1.5rem;
+  align-items: flex-start;
+}
+
+/* ── Flashy mode link + button colors ── */
+body.flashy-mode .meta-item a,
+body.flashy-mode .project-content a,
+body.flashy-mode .case-content a,
+body.flashy-mode .case-studies-list a,
+body.flashy-mode .card-links a,
+body.flashy-mode .company {
+  color: #a78bfa !important;
+}
+body.flashy-mode .meta-item a:hover,
+body.flashy-mode .project-content a:hover,
+body.flashy-mode .case-content a:hover {
+  color: #c4b5fd !important;
+}
+
+/* Active TOC item */
+body.flashy-mode #toc a.active {
+  color: #a78bfa !important;
+  border-left-color: #a78bfa !important;
+  background: rgba(167,139,250,0.08) !important;
+}
+body.flashy-mode #toc a:hover {
+  color: #c4b5fd !important;
+}
+body.flashy-mode #toc li a.active {
+  color: #a78bfa !important;
+}
