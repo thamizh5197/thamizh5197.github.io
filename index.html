@@ -262,7 +262,8 @@ title: Portfolio
     border-radius: 16px;
     font-size: 0.85rem;
     font-weight: 500;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
     transition: transform 0.2s ease;
   }
 
@@ -276,36 +277,36 @@ title: Portfolio
     line-height: 1;
   }
 
-  /* Chip Colors - Lighter backgrounds */
+  /* Chip Colors */
   .chip-success {
-    background-color: #f0f9f4;
-    color: #1e7e34;
-    border: 1px solid #c3e6cb;
+    background-color: var(--chip-success-bg);
+    color: var(--chip-success-color);
+    border: 1px solid var(--chip-success-border);
   }
 
   .chip-info {
-    background-color: #f0f8fa;
-    color: #0c5460;
-    border: 1px solid #bee5eb;
+    background-color: var(--chip-info-bg);
+    color: var(--chip-info-color);
+    border: 1px solid var(--chip-info-border);
   }
 
   .chip-primary {
-    background-color: #f7f5ff;
-    color: #5a3fb8;
-    border: 1px solid #d0c9ff;
+    background-color: var(--chip-primary-bg);
+    color: var(--chip-primary-color);
+    border: 1px solid var(--chip-primary-border);
   }
 
   .chip-default {
-    background-color: #fafbfc;
-    color: #495057;
-    border: 1px solid #dee2e6;
+    background-color: var(--chip-default-bg);
+    color: var(--chip-default-color);
+    border: 1px solid var(--chip-default-border);
   }
 
   /* Card Divider */
   .card-divider {
     margin: 1.5rem 0 1rem 0;
     border: none;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--card-divider);
   }
 
   /* Overview Link */
@@ -335,7 +336,7 @@ title: Portfolio
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--case-studies-title);
   }
 
   .case-studies-list {
@@ -354,12 +355,12 @@ title: Portfolio
     content: "•";
     position: absolute;
     left: 0;
-    color: #999;
+    color: var(--muted-text);
   }
 
   .case-studies-list a {
     font-size: 0.9rem;
-    color: #555;
+    color: var(--case-studies-link);
     text-decoration: none;
     transition: color 0.2s ease;
   }

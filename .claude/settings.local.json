@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle exec:*)",
+      "Bash(where:*)",
+      "Bash(cmd.exe:*)",
+      "Bash(powershell.exe:*)",
+      "Bash(ls /c/Ruby*)",
+      "Read(//c/tools/**)",
+      "Bash(/c/Ruby34-x64/bin/bundle install:*)",
+      "Bash(/c/Ruby34-x64/bin/bundle exec:*)",
+      "Bash(/c/Ruby34-x64/bin/gem list:*)",
+      "Bash(PATH=\"/c/Ruby34-x64/bin:$PATH\" jekyll serve:*)"
+    ]
+  }
+}
