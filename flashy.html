@@ -121,6 +121,9 @@ title: Thamizh Selvan — Portfolio
 </div>
 
 <style>
+/* ── Hide theme toggle on flashy page ── */
+#theme-toggle { display: none !important; }
+
 /* ── Reset within flashy ── */
 .f-root {
   position: relative;
@@ -179,26 +182,12 @@ title: Thamizh Selvan — Portfolio
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin-bottom: 1.5rem;
-  background: linear-gradient(
-    90deg,
-    #fff       0%,
-    #a78bfa   20%,
-    #60a5fa   40%,
-    rgba(255,255,255,0.95) 55%,
-    rgba(255,255,255,0.95) 62%,
-    transparent 78%,
-    transparent 100%
-  );
-  background-size: 300% 100%;
-  background-position: 100% 0;
+  background: linear-gradient(135deg, #fff 0%, #a78bfa 50%, #60a5fa 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: nameSweep 1.4s 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes nameSweep {
-  to { background-position: 0% 0; }
+  opacity: 0;
+  animation: fadeUp 0.7s 0.4s forwards;
 }
 
 .f-tagline {
