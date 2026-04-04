@@ -23,6 +23,9 @@ title: Thamizh Selvan — Portfolio
       <div class="f-hero-links">
         <a href="mailto:{{ site.data.bio.email }}" class="f-btn f-btn-primary">Get in touch</a>
         <a href="{{ site.data.bio.resume }}" target="_blank" class="f-btn f-btn-ghost">Resume</a>
+        {% for social in site.data.bio.socials %}
+        <a href="{{ social.url }}" target="_blank" rel="noopener noreferrer" class="f-btn f-btn-ghost">{{ social.name }}</a>
+        {% endfor %}
       </div>
     </div>
     <div class="f-scroll-hint">
@@ -434,7 +437,7 @@ title: Thamizh Selvan — Portfolio
 }
 
 .f-card-link {
-  font-size: 0.88rem;
+  font-size: 0.95rem;
   color: #7878aa;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -451,7 +454,7 @@ title: Thamizh Selvan — Portfolio
 }
 
 .f-card-case-label {
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: #444466;
@@ -554,7 +557,7 @@ title: Thamizh Selvan — Portfolio
 @media (max-width: 768px) {
   .f-hero { padding: 0 1.5rem; }
   .f-work { padding: 4rem 1.5rem 6rem; }
-  .f-scroll-hint { left: 1.5rem; }
+  .f-scroll-hint { display: none; }
   .f-card-inner { padding: 1.4rem; }
   .f-card-top { flex-direction: column; gap: 0.3rem; }
 }
